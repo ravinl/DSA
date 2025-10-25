@@ -32,6 +32,11 @@ int main(){
 
 // reverseList function definition
 int reverseList(){
+    if(head==NULL){
+                   printf("List is empty");
+                   return 0;
+    };
+    
     node *prevNode=NULL;
     node *currentNode=head;
     node *temp;
