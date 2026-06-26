@@ -7,15 +7,28 @@ intArr *create_int_array(int n)
     int i;
     intArr *arr;
 
-    arr = (int *)malloc(n*sizeof(int));
+    arr = (intArr *)malloc(sizeof(intArr));
 
-    for(i=0; i<n; i++)
+    if(arr == NULL)
     {
-        printf("Enter element %d", (i+1));
-        scanf("%d", arr->data);
+        return NULL;
+    }
+
+    arr->data = malloc(n*sizeof(int));
+
+    if(arr->data == NULL)
+    {
+        free(arr);
+        return NULL;
     }
 
     arr->size = n;
+
+    for(i=0; i<n; i++)
+    {
+        printf("Enter element number:%d :\n");
+        scanf("%d", arr->data + i);
+    }
 
     return arr;
 }
