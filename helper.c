@@ -26,7 +26,7 @@ intArr *create_int_array(int n)
 
     for(i=0; i<n; i++)
     {
-        printf("Enter element number:%d :\n");
+        printf("Enter element number:%d :\n", i);
         scanf("%d", arr->data + i);
     }
 
