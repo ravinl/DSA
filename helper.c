@@ -2,6 +2,16 @@
 #include <stdlib.h>
 #include "helper.h"
 
+int ask_for_arr_size()
+{
+    int n;
+    
+    printf("Enter the number of elements:\n");
+    scanf("%d", &n);
+
+    return n;
+}
+
 intArr *create_int_array(int n)
 {
     int i;
