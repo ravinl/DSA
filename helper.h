@@ -7,5 +7,6 @@ typedef struct{
 } intArr;
 
 intArr *create_int_array(int);
+int ask_for_arr_size();
 
 #endif
