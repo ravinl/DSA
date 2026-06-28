@@ -5,13 +5,12 @@ int maximum_of_all(intArr *);
 
 int main()
 {
-    int i,n;
+    int i,n,arr_length;
     intArr *array;
 
-    printf("Enter the number of elements:\n");
-    scanf("%d", &n);
+    arr_length = ask_for_arr_size();
 
-    array = create_int_array(n);
+    array = create_int_array(arr_length);
 
     int result = maximum_of_all(array);
     printf("Maximum among provided number is: %d", result);
