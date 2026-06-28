@@ -5,7 +5,7 @@ int maximum_of_all(intArr *);
 
 int main()
 {
-    int i,n,arr_length;
+    int arr_length;
     intArr *array;
 
     arr_length = ask_for_arr_size();
@@ -20,11 +20,15 @@ int main()
 
 int maximum_of_all(intArr *array)
 {
-    int i,maximum=0;
+    int i,maximum;
 
     for(i=0; i<array->size;i++)
     {
-        if(maximum<array->data[i])
+        if(i==0)
+        {
+            maximum = array->data[i];
+        }
+        else if(maximum<array->data[i])
         {
             maximum=array->data[i];
         }
